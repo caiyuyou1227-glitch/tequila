@@ -40,15 +40,23 @@ Each module includes an auto-detecting, freely movable location indicator that u
 
 ## Installation
 
-> tequila is currently distributed without an Apple Developer ID certificate (in progress). macOS will show a "damaged" or "unverified developer" warning on first launch — this is expected and not a sign of a corrupted file.
+**Step 1 — Download.** Go to the [Releases](../../releases) page and download `tequila.dmg`.
 
-1. Download `tequila.dmg` from the [Releases](../../releases) page
-2. Open the dmg and drag `tequila.app` into your Applications folder
-3. Open Terminal and run:
-```bash
-   xattr -cr /Applications/tequila.app
-```
-4. Launch tequila normally
+![Download tequila.dmg](screenshots/install-1-download.png)
+
+**Step 2 — Install.** Open the dmg and drag tequila into your Applications folder.
+
+![Drag tequila into Applications](screenshots/install-2-drag.png)
+
+**Step 3 — First launch.** Open tequila from Applications. macOS will show a message saying Apple could not verify tequila is free of malware. This appears because the app has not yet been notarized by Apple. The full source code is in this repository, and you can also build it yourself in Xcode (open `tequila.xcodeproj`, choose "My Mac", press Run).
+
+![macOS warning on first launch](screenshots/install-3-warning.png)
+
+**Step 4 — Open it anyway.** Click Done, open **System Settings → Privacy & Security**, scroll down to the message about tequila, click **Open Anyway**, and enter your password if asked. Then open tequila again.
+
+![Open Anyway in Privacy & Security](screenshots/install-4-open-anyway.png)
+
+**Alternative:** if you don't see the Open Anyway button, open Terminal, run `xattr -cr /Applications/tequila.app`, then open tequila again.
 
 ## Tech Stack
 
