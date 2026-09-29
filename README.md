@@ -1,73 +1,120 @@
-# tequila
+# Tequila 🥑
 
-**A productivity app built where professional utility meets aesthetic design.**
+> **💬 Have feedback or feature ideas?** [👉 Join the Discussion & Request Features](https://github.com/caiyuyou1227-glitch/tequila/discussions) — Every single report directly shapes our next update!
 
-Most productivity tools force a trade-off: either powerful but ugly, or pretty but shallow. tequila is built to close that gap — six focused modules, a fully customizable look, and a workflow designed around how creative and professional work actually happens.
+[![Open Issues](https://img.shields.io/github/issues/caiyuyou1227-glitch/tequila?style=flat-square&color=3b82f6)](https://github.com/caiyuyou1227-glitch/tequila/issues)
+[![Discussions](https://img.shields.io/badge/Community-Discussions-f97316?style=flat-square)](https://github.com/caiyuyou1227-glitch/tequila/discussions)
+[![Latest Release](https://img.shields.io/github/v/release/caiyuyou1227-glitch/tequila?style=flat-square&color=22c55e)](https://github.com/caiyuyou1227-glitch/tequila/releases)
+[![License: MIT](https://img.shields.io/badge/License-MIT-a855f7?style=flat-square)](LICENSE)
 
-## Features
+**A native, open-source macOS app where deep utility meets aesthetic design.**
 
-### 🎯 Focus
-Plan tasks for today or any date. Assign time blocks, and tasks auto-sort chronologically. Export any day's task list.
+Most productivity tools force a trade-off: either powerful but ugly, or pretty but shallow. **Tequila** bridges that gap — combining 6 core workflow modules, full visual customization, and a native macOS experience tailored for creative minds and power users.
+
+---
+
+## ✨ Key Features
+
+### 🎯 Focus — Chronological Task Blocking
+Plan tasks for today or any date. Time blocks auto-sort chronologically to map out your day. Export your daily task list in one click.
 
 ![Focus module](screenshots/focus.png)
 
-### ⏱ Timer
-Unlimited count-up and countdown timers. Label what each session is for, organize sessions into custom folders for tracking time across different projects.
+---
+
+### ⏱ Timer — Project-Based Time Tracking
+Unlimited count-up and countdown timers. Organize sessions into custom folders to track hours spent across different creative and technical projects.
 
 ![Timer module](screenshots/timer.png)
 
-### 📅 Calendar
-Browse any month. Mark dates with a highlighter tool — overlapping highlights blend colors, so overlapping schedules are visible at a glance. Drag directly on a date to create a schedule bar, customize time and font colors, and export the full month as a PDF in either bar or circle style.
+---
+
+### 📅 Calendar — Highlighter Overlap & Schedule Export
+Browse any month with an intuitive highlighter tool — overlapping highlights blend colors automatically, making busy schedules visible at a glance. Drag directly to build schedule bars, tweak font/bar colors, and export full-month PDFs in bar or circle style.
 
 ![Calendar module](screenshots/calendar.png)
 
-### 📬 Mail
-One unified inbox for Gmail, Outlook, iCloud Mail, ProtonMail, Yahoo Mail, 163, and QQ Mail — read and reply without switching between apps during focused work.
+---
+
+### 📬 Mail — Unified Multi-Account Inbox
+A unified inbox supporting Gmail, Outlook, iCloud Mail, ProtonMail, Yahoo Mail, 163, and QQ Mail — read, manage, and reply without breaking your flow.
 
 ![Mail module](screenshots/mail.png)
 
-### ⚙️ Settings
-Customize background and font with solid colors or uploaded images, and choose your typeface. Default language is English, with support for adding more languages planned — the app is built so language is never a barrier to using it fully.
+---
 
-![Settings module](screenshots/settings.png)
-
-### 📝 Logs
-A workspace for notes on ongoing work — insert images and tables, organize entries into folders and files.
+### 📝 Logs — Rich Workspace for Ideas
+An ongoing workspace for notes, creative specs, and research. Insert images, format tables, and organize entries cleanly into folders and files.
 
 ![Logs module](screenshots/logs.png)
 
-Each module includes an auto-detecting, freely movable location indicator that updates based on your region settings.
+---
 
-## Installation
+### ⚙️ Settings — Total Aesthetic Control
+Customize backgrounds and typography with solid colors or uploaded images. Choose your preferred typeface to match your desktop setup. Built with full localization support so language is never a barrier.
 
-**Step 1 — Download.** Go to the [Releases](../../releases) page and download `tequila.dmg`.
+![Settings module](screenshots/settings.png)
+
+> 📍 *Each module includes an auto-detecting, freely movable location indicator that adapts to your region settings.*
+
+---
+
+## ⚡️ Quick Installation Guide
+
+### Step 1 — Download
+Head to the [Releases](../../releases) page and grab the latest `tequila.dmg`.
 
 ![Download tequila.dmg](screenshots/install-1-download.png)
 
-**Step 2 — Install.** Open the dmg and drag tequila into your Applications folder.
+### Step 2 — Install
+Open the `.dmg` installer and drag **Tequila** directly into your **Applications** folder.
 
 ![Drag tequila into Applications](screenshots/install-2-drag.png)
 
-**Step 3 — First launch.** Open tequila from Applications. macOS will show a message saying Apple could not verify tequila is free of malware. This appears because the app has not yet been notarized by Apple. The full source code is in this repository, and you can also build it yourself in Xcode (open `tequila.xcodeproj`, choose "My Mac", press Run).
+### Step 3 — First Launch & Security Notice
+Launch Tequila from Applications. Because this is an open-source project without a paid Apple Developer certificate yet, macOS will show a standard unnotarized app warning. 
+
+*(Don't worry — the code is 100% open-source right here. You can inspect it or build it directly via Xcode by opening `tequila.xcodeproj`!)*
 
 ![macOS warning on first launch](screenshots/install-3-warning.png)
 
-**Step 4 — Open it anyway.** Click Done, open **System Settings → Privacy & Security**, scroll down to the message about tequila, click **Open Anyway**, and enter your password if asked. Then open tequila again.
+### Step 4 — One-Click Unlock
+1. Click **Done**.
+2. Open **System Settings → Privacy & Security**.
+3. Scroll down to the Tequila notification, click **Open Anyway**, and enter your Mac password.
+4. Open Tequila again — you're all set!
 
 ![Open Anyway in Privacy & Security](screenshots/install-4-open-anyway.png)
 
-**Alternative:** if you don't see the Open Anyway button, open Terminal, run `xattr -cr /Applications/tequila.app`, then open tequila again.
+> 💡 **Terminal Shortcut:** If you don't see the *Open Anyway* button, open Terminal and run:
+> ```bash
+> xattr -cr /Applications/tequila.app
+> ```
 
-## Tech Stack
+---
 
-Built natively in Swift for macOS.
+## 🛠 Tech Stack
 
-## Why I built this
+- **Language:** Native Swift
+- **Platform:** macOS (optimized for Apple Silicon & Intel)
+- **Architecture:** Native AppKit / SwiftUI
 
-I come from a background in fashion design, fashion management, and 2D/3D visual production — not traditional software engineering. I built tequila because I couldn't find a productivity tool that respected both function and design: the options I found were either too simplistic or genuinely inconvenient to use day to day. This started as something I built for myself, but I'd like to share it more widely.
+---
 
-I'm a high school student building this independently, and I'd genuinely welcome feedback, bug reports, or feature ideas — [open an issue](../../issues) anytime.
+## 🎨 Why I Built This
 
-## Feedback
+I come from a background in **fashion design, fashion management, and 2D/3D visual production** rather than traditional software engineering. 
 
-If tequila is useful to you, or if something's broken or missing, please [open an issue](../../issues). Every report helps make this better.
+I built Tequila because I couldn't find a macOS productivity tool that truly respected both deep function and visual aesthetics: existing options were either aesthetically lacking or frustratingly clunky. It started as a personal tool to solve my own daily workflow bottlenecks.
+
+I am a **high school student** maintaining this project independently. Feedback, bug reports, and feature requests mean the world to me!
+
+---
+
+## 💬 Feedback & Community
+
+Whether Tequila streamlined your workday or you found something that needs fixing:
+- 💡 **Got an idea or UI suggestion?** [Start a Discussion](../../discussions)
+- 🐛 **Found a bug or protocol issue?** [Open an Issue](../../issues)
+
+Every single input helps iterate and polish the app. Thank you for testing Tequila! 🚀
