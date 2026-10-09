@@ -46,7 +46,7 @@ final class LanguageManager: ObservableObject {
         
         // 控制台与任务
         "console_title": [.en: "Tasks"],
-        "console_subtitle": [.en: "Pipeline"],
+        "console_subtitle": [.en: ""],
         "sys_mode": [.en: "Sandbox Mode"],
         "placeholder_task": [.en: "Task name..."],
         "empty_tip": [.en: "No active tasks."],
@@ -936,10 +936,10 @@ struct ContentView: View {
     private var leftSidebarPanel: some View {
         VStack(spacing: 0) {
             VStack(alignment: .leading, spacing: 3) {
-                Text(verbatim: "CORE")
+                Text(verbatim: "TEQUILA")
                     .font(.UniversalFont(size: 11, weight: .bold, design: .monospaced))
                     .UniversalTextColorModifier()
-                Text(verbatim: LS("sys_mode"))
+                Text(verbatim: LS("yuyou"))
                     .font(.UniversalFont(size: 8, weight: .light, design: .default))
                     .UniversalTextColorModifier(opacity: 0.6)
             }
@@ -1465,18 +1465,18 @@ struct GlobalTimerSandboxView: View {
     private var leftFolderManagerPanel: some View {
         VStack(alignment: .leading, spacing: 16) {
             VStack(alignment: .leading, spacing: 4) {
-                Text("CHRONO CORE")
+                Text("CHRONO")
                     .font(.UniversalFont(size: 11, weight: .bold, design: .monospaced))
                     .UniversalTextColorModifier()
                     .tracking(1.2)
-                Text("Advanced Timebase Pipeline")
+                Text("")
                     .font(.UniversalFont(size: 9, weight: .light))
                     .foregroundColor(.white.opacity(0.3))
             }
             Rectangle().frame(height: 0.5).foregroundColor(.white.opacity(0.08))
             
             VStack(alignment: .leading, spacing: 6) {
-                Text("Archive Folders (View Targets)")
+                Text("Archive Folders")
                     .font(.UniversalFont(size: 9, weight: .semibold))
                     .foregroundColor(.white.opacity(0.4))
                     .tracking(0.5)
@@ -1578,7 +1578,7 @@ struct GlobalTimerSandboxView: View {
     private var modeSelectorSegment: some View {
         HStack(spacing: 2) {
             Button(action: { changeMode(.stopwatch) }) {
-                Text("CHRONO Count Up")
+                Text("Up")
                     .font(.UniversalFont(size: 10, weight: isStopwatch ? .semibold : .regular, design: .monospaced))
                     .frame(maxWidth: .infinity)
                     .padding(.vertical, 6)
@@ -1588,7 +1588,7 @@ struct GlobalTimerSandboxView: View {
             }.buttonStyle(.plain)
             
             Button(action: { changeMode(.countdown) }) {
-                Text("COUNT Countdown")
+                Text("Down")
                     .font(.UniversalFont(size: 10, weight: isCountdown ? .semibold : .regular, design: .monospaced))
                     .frame(maxWidth: .infinity)
                     .padding(.vertical, 6)
@@ -1763,7 +1763,7 @@ struct GlobalTimerSandboxView: View {
                     Button(action: togglePauseEngine) {
                         HStack {
                             Image(systemName: isPaused ? "play.fill" : "pause.fill")
-                            Text(isPaused ? "Resume" : "Safe Pause")
+                            Text(isPaused ? "Resume" : "Pause")
                         }
                         .font(.UniversalFont(size: 11, weight: .medium))
                         .frame(maxWidth: .infinity)
@@ -1776,7 +1776,7 @@ struct GlobalTimerSandboxView: View {
                     Button(action: resetTimerEngine) {
                         HStack {
                             Image(systemName: "gobackward")
-                            Text("Abort & Reset")
+                            Text("Reset")
                         }
                         .font(.UniversalFont(size: 11, weight: .medium))
                         .frame(maxWidth: .infinity)
@@ -3790,10 +3790,10 @@ struct GlobalThemeSettingView: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 24) {
             VStack(alignment: .leading, spacing: 4) {
-                Text("SYSTEM PREFERENCES")
+                Text("YOUR PREFERENCES")
                     .font(.UniversalFont(size: 16, weight: .regular, design: .monospaced))
                     .UniversalTextColorModifier()
-                Text("Customize Workspace Environment")
+                Text("")
                     .font(.UniversalFont(size: 10))
                     .foregroundColor(.white.opacity(0.7))
                     .UniversalTextColorModifier()
@@ -3829,8 +3829,8 @@ struct GlobalThemeSettingView: View {
                     .foregroundColor(.white)
                 
                 HStack(spacing: 12) {
-                    ThemeModeCardButton(title: "Pure Dark", isActive: theme.backgroundMode == 0) { theme.backgroundMode = 0 }
-                    ThemeModeCardButton(title: "Solid Color (Picker)", isActive: theme.backgroundMode == 1) { theme.backgroundMode = 1 }
+                    ThemeModeCardButton(title: "Dark", isActive: theme.backgroundMode == 0) { theme.backgroundMode = 0 }
+                    ThemeModeCardButton(title: "Picker", isActive: theme.backgroundMode == 1) { theme.backgroundMode = 1 }
                     ThemeModeCardButton(title: "Local Image...", isActive: theme.backgroundMode == 2) { theme.triggerLocalFilePicker() }
                 }
                 
@@ -3870,11 +3870,11 @@ struct GlobalThemeSettingView: View {
                     .foregroundColor(.white)
                 
                 HStack(spacing: 12) {
-                    ThemeModeCardButton(title: "Default White", isActive: theme.textMode == 0) {
+                    ThemeModeCardButton(title: "White", isActive: theme.textMode == 0) {
                         theme.textMode = 0
                         theme.textColor = .white
                     }
-                    ThemeModeCardButton(title: "Custom Color (Picker)", isActive: theme.textMode == 1) { theme.textMode = 1 }
+                    ThemeModeCardButton(title: "Picker", isActive: theme.textMode == 1) { theme.textMode = 1 }
                     ThemeModeCardButton(title: "Local Texture...", isActive: theme.textMode == 2) { theme.triggerTextFilePicker() }
                 }
                 
@@ -3938,7 +3938,7 @@ struct GlobalThemeSettingView: View {
                         }
                     } label: {
                         HStack {
-                            Text("Custom Global Font:")
+                            Text("Font:")
                                 .font(.UniversalFont(size: 11))
                                 .foregroundColor(.white.opacity(0.7))
                             
