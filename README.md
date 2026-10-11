@@ -4,24 +4,17 @@
 
 # TEQUILA
 
-### A PERSONAL WORKSPACE, ENGINEERED FOR FOCUS.
+### A PERSONAL WORKSPACE, DESIGNED AROUND HOW PEOPLE THINK.
 
-**Six tools. One native macOS experience. Your visual rules.**
+**A native macOS productivity environment where software engineering meets visual design.**
 
-An open-source productivity workspace built with Swift, combining planning, time management, communication, and personal documentation into one customizable native macOS environment.
+Tequila is an open-source workspace built with Swift, combining task planning, time management, communication, and personal documentation into one customizable experience.
+
+Created from a simple question:
+
+**Can productivity software be both powerful and personal?**
 
 </div>
-
-
----
-
-## PRODUCT DEMO
-
-### Experience Tequila.
-
-A complete walkthrough of Tequila's workspace — including Focus planning, Timer tracking, Calendar visualization, Mail integration, Logs documentation, and interface customization.
-
-[![Tequila Demo](https://img.youtube.com/vi/N34f45MKJFo/maxresdefault.jpg)](https://youtu.be/N34f45MKJFo)
 
 
 ---
@@ -39,6 +32,7 @@ A complete walkthrough of Tequila's workspace — including Focus planning, Time
 [ REQUEST A FEATURE ](../../discussions)
 
 
+
 ![Release](https://img.shields.io/github/v/release/caiyuyou1227-glitch/tequila?style=flat-square&color=8AFFC1&label=RELEASE)
 
 ![Issues](https://img.shields.io/github/issues/caiyuyou1227-glitch/tequila?style=flat-square&color=8AFFC1&label=ISSUES)
@@ -53,37 +47,43 @@ A complete walkthrough of Tequila's workspace — including Focus planning, Time
 
 ---
 
+# PRODUCT DEMO
+
+## Experience Tequila.
+
+A complete walkthrough of Tequila's workspace, demonstrating:
+
+- Focus task planning
+- Time tracking
+- Calendar visualization
+- Mail integration
+- Logs documentation
+- Interface customization
+
+
+[![Tequila Demo](https://img.youtube.com/vi/N34f45MKJFo/maxresdefault.jpg)](https://youtu.be/N34f45MKJFo)
+
+
+
+---
+
 # 00 / THE IDEA
 
-## Less friction. More flow.
+## Designing a workspace that feels personal.
 
-Modern productivity software often separates everyday workflows into isolated tools.
+Tequila started from my own experience with productivity tools.
 
-One app manages tasks.
+Many applications provide powerful features, but often treat every user the same:
 
-Another tracks time.
+fixed layouts, limited customization, and little connection between functionality and personal expression.
 
-Another stores notes.
+Coming from a background in fashion design, visual production, and creative technology, I began wondering:
 
-Another organizes schedules.
+**Could software become something people not only use, but also feel connected to?**
 
-Tequila explores a different approach:
+Tequila became my exploration of that idea.
 
-**What if your entire workflow existed inside one personal environment?**
-
-Designed around the idea that productivity should not only be efficient — it should also feel intentional, visual, and personal.
-
-Plan your day.
-
-Understand your time.
-
-Visualize your schedule.
-
-Manage communication.
-
-Capture ideas.
-
-One workspace, shaped around the way you think.
+A workspace where productivity is not only about completing tasks, but also about creating an environment that reflects the person using it.
 
 
 
@@ -114,9 +114,9 @@ Create schedules, organize priorities, manage future tasks, and export daily wor
 
 ### Make time visible.
 
-Track focused sessions through count-up and countdown timers.
+Track count-up and countdown sessions across unlimited projects.
 
-Organize projects with custom folders and understand how your time is spent.
+Organize timers with custom folders and understand where your time goes.
 
 ![Timer module](screenshots/timer.png)
 
@@ -129,9 +129,9 @@ Organize projects with custom folders and understand how your time is spent.
 
 ### Visualize your time.
 
-Create calendars around your own visual language.
+Build calendars around your own visual language.
 
-Customize colors, fonts, highlights, schedule bars, and export personalized monthly views.
+Customize colors, typography, highlights, schedule bars, and export personalized monthly views.
 
 ![Calendar module](screenshots/calendar.png)
 
@@ -146,7 +146,16 @@ Customize colors, fonts, highlights, schedule bars, and export personalized mont
 
 Connect multiple email accounts into one workflow.
 
-Supports Gmail, Outlook, iCloud Mail, Proton Mail, Yahoo Mail, 163 Mail, and QQ Mail.
+Tequila supports:
+
+- Gmail
+- Outlook
+- iCloud Mail
+- Proton Mail
+- Yahoo Mail
+- 163 Mail
+- QQ Mail
+
 
 ![Mail module](screenshots/mail.png)
 
@@ -159,9 +168,15 @@ Supports Gmail, Outlook, iCloud Mail, Proton Mail, Yahoo Mail, 163 Mail, and QQ 
 
 ### A space for unfinished thoughts.
 
-Store notes, research, creative ideas, and project documentation.
+Store:
 
-Organize information with folders, images, tables, and structured documents.
+- Notes
+- Research
+- Creative ideas
+- Project documentation
+
+
+Organize information through folders, images, tables, and structured documents.
 
 ![Logs module](screenshots/logs.png)
 
@@ -174,7 +189,13 @@ Organize information with folders, images, tables, and structured documents.
 
 ### Make it yours.
 
-Customize backgrounds, typography, interface colors, and workspace appearance.
+Customize:
+
+- Backgrounds
+- Typography
+- Colors
+- Interface appearance
+
 
 Tequila adapts to different visual preferences and languages.
 
@@ -184,7 +205,7 @@ Tequila adapts to different visual preferences and languages.
 
 > **Designed to adapt.**
 >
-> Every workspace element is built around personalization and user control.
+> Every element is built around personalization and user control.
 
 
 
@@ -199,7 +220,8 @@ Tequila explores the intersection of:
 **Software Engineering × Product Design × Human Experience**
 
 
-### Native by design
+
+## Native by design
 
 Built specifically for macOS using:
 
@@ -208,17 +230,19 @@ Built specifically for macOS using:
 - AppKit
 
 
-### Visual freedom
 
-Users can customize:
+## Visual freedom
+
+Users can personalize:
 
 - Backgrounds
 - Typography
 - Colors
-- Layout preferences
+- Workspace appearance
 
 
-### Integrated workflows
+
+## Integrated workflows
 
 Instead of switching between disconnected applications, Tequila connects:
 
@@ -228,7 +252,8 @@ Instead of switching between disconnected applications, Tequila connects:
 - Documentation
 
 
-### Open development
+
+## Open development
 
 The project evolves through:
 
@@ -242,23 +267,25 @@ The project evolves through:
 
 # 03 / DEVELOPMENT STORY
 
-## From personal frustration to open-source product.
+## From designer to developer.
 
-Tequila started from a personal observation:
+Before building software, I learned to think through visual systems, composition, and human interaction through fashion design, fashion management, and 2D/3D creative production.
 
-Many productivity applications provide powerful features, but often leave little room for personal expression.
+When I began exploring programming, I saw code as another design medium.
 
-With a background in fashion design, visual production, and creative technology, I wanted to explore a different question:
+Swift and macOS development allowed me to transform visual ideas into interactive experiences.
 
-**Can software be both highly functional and visually personal?**
+Tequila became a bridge between two worlds:
 
-I began building Tequila as a native macOS application using Swift.
+**the precision of engineering and the creativity of design.**
 
-After releasing version 1.0 publicly, I shared the project through GitHub, product demonstrations, and social platforms.
 
-Feedback from users helped guide later improvements, including interface refinement, clearer information design, and a better overall experience.
+After releasing version 1.0, I shared Tequila publicly through GitHub, YouTube demonstrations, and social platforms.
 
-Tequila continues to evolve as an exploration of how design thinking and software engineering can create more human-centered tools.
+User feedback helped identify unclear interactions and guided later improvements, including interface refinement and usability updates in version 1.1.
+
+
+Tequila continues to evolve as an exploration of human-centered software design.
 
 
 
@@ -287,7 +314,7 @@ Designed for macOS with Apple Silicon and Intel compatibility.
 
 
 
-### 01 — Download
+## 01 — Download
 
 Download the latest release:
 
@@ -295,13 +322,13 @@ Download the latest release:
 
 
 
-### 02 — Install
+## 02 — Install
 
 Open the DMG file and move Tequila into Applications.
 
 
 
-### 03 — Launch
+## 03 — Launch
 
 Open Tequila from Applications.
 
@@ -311,7 +338,7 @@ Only continue if you downloaded Tequila from this official repository.
 
 
 
-### 04 — Personalize
+## 04 — Personalize
 
 Open Settings and create your own workspace.
 
