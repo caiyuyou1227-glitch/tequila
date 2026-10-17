@@ -33,6 +33,15 @@ Created from a simple question:
 
 
 
+---
+
+## LATEST UPDATE / v1.2
+
+- Added count-up and countdown day counters to the Focus page, making it easier to track days elapsed and days remaining.
+- Fixed language and wording issues for a clearer, more consistent interface.
+
+---
+
 ![Release](https://img.shields.io/github/v/release/caiyuyou1227-glitch/tequila?style=flat-square&color=8AFFC1&label=RELEASE)
 
 ![Issues](https://img.shields.io/github/issues/caiyuyou1227-glitch/tequila?style=flat-square&color=8AFFC1&label=ISSUES)
@@ -55,7 +64,7 @@ A complete walkthrough of Tequila's workspace and design system.
 
 Explore:
 
-- Focus task planning
+- Focus task planning and day counters
 - Time tracking
 - Calendar visualization
 - Mail integration
@@ -104,6 +113,8 @@ a workspace where engineering and visual design work together to create a more p
 Transform tasks into chronological plans.
 
 Create schedules, organize priorities, manage future tasks, and export daily workflows.
+
+Track important dates with count-up and countdown day counters, showing how many days have passed or remain.
 
 ![Focus module](screenshots/focus.png)
 
@@ -338,7 +349,7 @@ User responses helped identify unclear interactions and guided improvements in:
 - Overall usability
 
 
-These insights contributed to later updates, including v1.1 refinements.
+These insights contributed to later updates, including the v1.1 refinements and the v1.2 language fixes and Focus day counters.
 
 
 
