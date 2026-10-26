@@ -1,185 +1,372 @@
-# TEQUILA
 
-**A workspace shaped around the way you work.**
+<div align="center">
 
-Tequila is an open-source native macOS productivity app built with Swift, SwiftUI, and AppKit. It brings planning, time tracking, calendars, email, and notes into one customizable workspace.
+# T E Q U I L A
 
-Rather than asking you to adapt to a fixed system, Tequila gives you room to shape your own.
+### A WORKSPACE, DESIGNED AROUND YOU.
 
-**[Download Tequila](https://github.com/caiyuyou1227-glitch/tequila/releases/latest) · [Explore the Source](https://github.com/caiyuyou1227-glitch/tequila) · [Share Feedback](https://github.com/caiyuyou1227-glitch/tequila/discussions)**
+**Plan with intention. Track with clarity. Work your way.**
 
-![Release](https://img.shields.io/github/v/release/caiyuyou1227-glitch/tequila?style=flat-square&color=8AFFC1&label=RELEASE)
+A native macOS productivity workspace built with Swift, SwiftUI, and AppKit.
+
+[Download Latest Release](https://github.com/caiyuyou1227-glitch/tequila/releases/latest) · [Explore Source Code](https://github.com/caiyuyou1227-glitch/tequila) · [Request a Feature](https://github.com/caiyuyou1227-glitch/tequila/discussions)
+
+<br/>
+
+![Release](https://img.shields.io/github/v/release/caiyuyou1227-glitch/tequila?style=flat-square&color=8AFFC1&label=LATEST%20RELEASE)
 ![Stars](https://img.shields.io/github/stars/caiyuyou1227-glitch/tequila?style=flat-square&color=8AFFC1&label=STARS)
 ![Forks](https://img.shields.io/github/forks/caiyuyou1227-glitch/tequila?style=flat-square&color=8AFFC1&label=FORKS)
 ![Issues](https://img.shields.io/github/issues/caiyuyou1227-glitch/tequila?style=flat-square&color=8AFFC1&label=ISSUES)
 ![Platform](https://img.shields.io/badge/PLATFORM-macOS-8AFFC1?style=flat-square)
-![Swift](https://img.shields.io/badge/BUILT_WITH-SWIFT-8AFFC1?style=flat-square)
+![Language](https://img.shields.io/badge/LANGUAGE-Swift-8AFFC1?style=flat-square)
+
+</div>
 
 ---
 
-## 01 — The Workspace
+## 00 / THE IDEA
 
-Six modules. One working environment.
+> **Your workflow is personal. Your tools should be, too.**
 
-Tequila brings everyday workflows together without forcing them into a one-size-fits-all interface.
+Tequila began with a question: why should people adapt their working habits to the limitations of their software?
 
-| Module | Purpose |
-| --- | --- |
-| **Focus** | Plan tasks, organize priorities, and keep important dates in view. |
-| **Timer** | Track work sessions with count-up and countdown timers. |
-| **Calendar** | Visualize schedules with customizable colors, typography, and layouts. |
-| **Mail** | Bring multiple email accounts into one workspace. |
-| **Logs** | Keep notes, research, images, and tables organized. |
-| **Settings** | Shape the interface around your preferences. |
+Many productivity tools prioritize functionality at the expense of visual coherence, while others offer polished interfaces without bringing everyday workflows together. I wanted to explore a different approach: a workspace where practical utility, visual design, and personalization are considered as parts of the same system.
 
-## 02 — Explore the Modules
+Built as an independent project, Tequila brings six everyday workflows into one native macOS application.
 
-### 01 / Focus
-**Make time visible.**
+The goal is not to build the application with the most features. It is to build a workspace in which the features, interface, and user's working habits make sense together.
 
-Organize tasks chronologically, plan upcoming work, and track elapsed or remaining days for important dates.
-
-![Focus](screenshots/focus.png)
-
-### 02 / Timer
-**Give time a structure.**
-
-Use count-up and countdown timers to track work sessions, organize projects into folders, and review how time is spent.
-
-![Timer](screenshots/timer.png)
-
-### 03 / Calendar
-**See your schedule your way.**
-
-Customize colors, typography, highlights, and schedule layouts. Export personalized monthly calendar views.
-
-![Calendar](screenshots/calendar.png)
-
-### 04 / Mail
-**Bring conversations together.**
-
-Access multiple email accounts from one workspace.
-
-Supported services include Gmail, Outlook, iCloud Mail, Proton Mail, Yahoo Mail, 163 Mail, and QQ Mail.
-
-![Mail](screenshots/mail.png)
-
-### 05 / Logs
-**Give ideas somewhere to go.**
-
-Capture notes, document research, and organize project materials with folders, images, and tables.
-
-![Logs](screenshots/logs.png)
-
-### 06 / Settings
-**Make the workspace yours.**
-
-Adjust backgrounds, colors, typography, and interface preferences to create an environment that feels right for you.
-
-![Settings](screenshots/settings.png)
+**DESIGN PRINCIPLE / Function and form should work together.**
 
 ---
 
-## 03 — Design Philosophy
+## 01 / THE SYSTEM
 
-### Function is not the opposite of form.
+### Six modules. One workspace.
 
-Productivity software is often judged by what it can do. But the way a tool looks, feels, and organizes information also shapes the experience of using it.
+```mermaid
+flowchart TD
+    A["TEQUILA<br/>Personal Workspace"]
 
-Tequila began with a simple question: **Why should people adapt to their tools when their tools could adapt to them?**
+    A --> B["FOCUS<br/>Planning"]
+    A --> C["TIMER<br/>Time Tracking"]
+    A --> D["CALENDAR<br/>Scheduling"]
+    A --> E["MAIL<br/>Communication"]
+    A --> F["LOGS<br/>Knowledge"]
+    A --> G["SETTINGS<br/>Personalization"]
 
-Its interface is designed alongside its functionality, not added as a finishing touch. Customization is part of the product itself, giving users more control over their working environment.
+    B -. "Plan" .-> C
+    C -. "Track" .-> F
+    D -. "Schedule" .-> B
+    G -. "Customize" .-> A
 
-### One environment, connected workflows.
+    classDef core fill:#101714,stroke:#8AFFC1,color:#8AFFC1,stroke-width:2px
+    classDef module fill:#171C19,stroke:#59665F,color:#FFFFFF
+    class A core
+    class B,C,D,E,F,G module
+```
 
-Planning, time tracking, calendars, email, and notes often live in separate applications. Tequila brings these everyday tools into a shared environment, making them easier to access within one consistent interface.
+Each module serves a distinct purpose while sharing the same application and visual environment.
 
-The goal is not to maximize the number of features. It is to make the features that matter work together coherently.
+| Module | Core Function | Design Intent |
+|:--|:--|:--|
+| **Focus** | Task and date planning | Make priorities and important dates visible |
+| **Timer** | Count-up and countdown timing | Make time measurable |
+| **Calendar** | Schedule visualization | Make time easier to interpret |
+| **Mail** | Multi-account email | Bring communication together |
+| **Logs** | Notes and research | Give information a structure |
+| **Settings** | Interface customization | Give users control over their environment |
 
 ---
 
-## 04 — From Idea to Iteration
+## 02 / THE MODULES
 
-Tequila is an independently developed project that brings together visual design, product thinking, and software engineering.
+### 01 — FOCUS
+**Structure the day. See time differently.**
 
-Its development follows an ongoing process:
+Focus helps organize tasks and important dates in a chronological workspace.
 
-**Observe → Design → Build → Release → Refine**
+- Create and organize daily schedules.
+- Keep upcoming tasks and priorities in view.
+- Track elapsed days and days remaining for important dates.
+- Export daily task lists.
 
-Each release is an opportunity to revisit decisions, improve existing workflows, and make the product more considered.
+![Focus Interface](screenshots/focus.png)
+
+---
+
+### 02 — TIMER
+**Turn time into something you can understand.**
+
+A workspace for tracking sessions and organizing time across projects.
+
+- Use count-up and countdown timers.
+- Organize projects with custom folders.
+- Track time spent on different activities.
+
+![Timer Interface](screenshots/timer.png)
+
+---
+
+### 03 — CALENDAR
+**Make schedules visual, not just informational.**
+
+A customizable calendar designed around visual hierarchy and personal preference.
+
+- Adjust colors, typography, and highlights.
+- Customize the appearance of schedules.
+- Export personalized monthly calendar views.
+
+![Calendar Interface](screenshots/calendar.png)
+
+---
+
+### 04 — MAIL
+**Multiple inboxes. One place to work.**
+
+Bring supported email accounts into a unified workspace.
+
+Supported services:
+
+- Gmail
+- Outlook
+- iCloud Mail
+- Proton Mail
+- Yahoo Mail
+- 163 Mail
+- QQ Mail
+
+![Mail Interface](screenshots/mail.png)
+
+---
+
+### 05 — LOGS
+**Capture ideas. Organize what matters.**
+
+Logs provides a place for notes, research, and project materials.
+
+- Record ideas and working notes.
+- Organize information into folders.
+- Combine text with images and tables.
+
+![Logs Interface](screenshots/logs.png)
+
+---
+
+### 06 — SETTINGS
+**The interface is part of the experience.**
+
+Customization is not an afterthought. It is part of how Tequila is designed to be used.
+
+- Customize backgrounds and colors.
+- Adjust typography and interface preferences.
+- Shape the visual environment around individual working habits.
+
+![Settings Interface](screenshots/settings.png)
+
+---
+
+## 03 / DESIGN SYSTEM
+
+### Form follows use. Personalization follows the person.
+
+Tequila treats visual design as part of product functionality.
+
+An interface does more than display information. It determines what attracts attention, how information is organized, and how comfortably people interact with a tool over time.
+
+Three principles guide the project:
+
+#### 01 — Visual hierarchy
+
+Information should be organized so that users can distinguish priorities, navigate functions, and understand the interface without unnecessary visual noise.
+
+#### 02 — Customization
+
+People have different working habits and visual preferences. Adjustable colors, backgrounds, and typography give users greater control over their workspace.
+
+#### 03 — Functional coherence
+
+The six modules should feel like parts of one product, rather than unrelated utilities placed inside the same window.
+
+The challenge is to balance individual functionality with a consistent overall experience.
+
+---
+
+## 04 / ENGINEERING
+
+### From visual concept to native application.
+
+Tequila is built specifically for macOS using Swift and Apple's interface frameworks.
+
+```text
+TEQUILA
+│
+├── Application
+│   └── Native macOS experience
+│
+├── Interface
+│   ├── SwiftUI
+│   └── AppKit
+│
+├── Workspace
+│   ├── Focus
+│   ├── Timer
+│   ├── Calendar
+│   ├── Mail
+│   ├── Logs
+│   └── Settings
+│
+└── Distribution
+    └── GitHub Releases
+```
+
+| Layer | Technology | Role |
+|:--|:--|:--|
+| Language | Swift | Application implementation |
+| Interface | SwiftUI | Declarative interface development |
+| Native framework | AppKit | macOS interface capabilities |
+| Platform | macOS | Desktop environment |
+| Distribution | GitHub Releases | Public builds and version history |
+
+The project brings interface decisions and implementation into the same development process. Design choices must work not only as visual concepts, but also as parts of a functioning application.
+
+---
+
+## 05 / ITERATION
+
+### A release is not the end of the process.
+
+Tequila is developed through an ongoing cycle of observation, implementation, release, feedback, and revision.
+
+```mermaid
+flowchart LR
+    A["01<br/>Observe"] --> B["02<br/>Design"]
+    B --> C["03<br/>Build"]
+    C --> D["04<br/>Release"]
+    D --> E["05<br/>Gather Feedback"]
+    E --> F["06<br/>Refine"]
+    F --> B
+
+    classDef stage fill:#111713,stroke:#8AFFC1,color:#FFFFFF
+    class A,B,C,D,E,F stage
+```
 
 ### Release history
 
-- **v1.0 — Initial Release:** Introduced the core workspace and its six modules.
-- **v1.1 — UI Refinements:** Simplified the interface and removed unnecessary text.
-- **v1.2 — Focus Updates:** Added count-up and countdown day counters and corrected language inconsistencies.
-- **v1.3 — Task Timing:** Refined count-up and countdown functionality in Tasks.
+| Version | Focus | Changes |
+|:--|:--|:--|
+| **v1.0** | Initial release | Introduced the core workspace and six modules |
+| **v1.1** | Interface refinement | Simplified the interface and removed unnecessary text |
+| **v1.2** | Focus updates | Added count-up and countdown day counters; corrected wording inconsistencies |
+| **v1.3** | Task timing | Refined count-up and countdown functionality in Tasks |
 
-See the [release history](https://github.com/caiyuyou1227-glitch/tequila/releases) for downloadable builds and release notes.
+Each iteration provides an opportunity to revisit the product, reconsider earlier decisions, and make targeted improvements.
+
+The objective is not simply to add features with every release. It is to make the existing experience more considered and useful.
+
+**[Explore All Releases →](https://github.com/caiyuyou1227-glitch/tequila/releases)**
 
 ---
 
-## 05 — Under the Hood
+## 06 / PRODUCT DEMONSTRATION
 
-| Component | Technology |
-| --- | --- |
-| Language | Swift |
-| Platform | macOS |
-| Interface | SwiftUI, AppKit |
-| Distribution | GitHub Releases |
-| Source | Public GitHub repository |
+### See the workspace in action.
 
-Tequila is built specifically for macOS using native Apple development frameworks.
+Explore the interface, core modules, and product experience in the walkthrough below.
+
+<div align="center">
+
+[![Tequila Product Demo](https://img.youtube.com/vi/N34f45MKJFo/maxresdefault.jpg)](https://youtu.be/N34f45MKJFo)
+
+**[Watch the Full Demo on YouTube →](https://youtu.be/N34f45MKJFo)**
+
+</div>
+
+---
+
+## 07 / GET STARTED
 
 ### Download
 
-1. Visit [GitHub Releases](https://github.com/caiyuyou1227-glitch/tequila/releases/latest).
-2. Download the latest `.dmg` file.
-3. Open the disk image and drag Tequila into your Applications folder.
-4. Launch Tequila and customize your workspace in Settings.
+1. Open [GitHub Releases](https://github.com/caiyuyou1227-glitch/tequila/releases/latest).
+2. Download the latest Tequila `.dmg` file.
+3. Open the disk image and drag the application into your Applications folder.
+4. Launch Tequila and personalize the workspace in Settings.
 
-If macOS displays a security warning, verify the download source and understand the implications before proceeding. Do not bypass security protections unless you trust the application.
+If macOS displays a security warning, verify the source and understand the implications before proceeding. Do not bypass security protections unless you trust the application.
 
 ### Build from source
 
-Clone the repository:
+Clone the public repository:
 
 ```bash
 git clone https://github.com/caiyuyou1227-glitch/tequila.git
 ```
 
-Open the Xcode project and build the application using a compatible macOS development environment.
+Open the Xcode project in a compatible macOS development environment and build the application.
 
 ---
 
-## 06 — See It in Action
+## 08 / COMMUNITY
 
-Watch the walkthrough to explore the interface and core workflows.
+### Built independently. Open to ideas.
 
-[![Tequila Product Demo](https://img.youtube.com/vi/N34f45MKJFo/maxresdefault.jpg)](https://youtu.be/N34f45MKJFo)
+Tequila is publicly available for people to explore, test, and discuss.
 
----
+Feedback is an important part of product development: a suggestion can reveal an unclear interaction, a usability issue, or an assumption worth reconsidering.
 
-## 07 — Open to Feedback
-
-Tequila is an evolving project. Feedback helps identify what works, what feels unclear, and what could be improved.
-
-- **Feature ideas:** [GitHub Discussions](https://github.com/caiyuyou1227-glitch/tequila/discussions)
+- **Feature requests:** [GitHub Discussions](https://github.com/caiyuyou1227-glitch/tequila/discussions)
 - **Bug reports:** [GitHub Issues](https://github.com/caiyuyou1227-glitch/tequila/issues)
 - **Source code:** [Browse the repository](https://github.com/caiyuyou1227-glitch/tequila)
+- **Product demonstration:** [YouTube](https://youtu.be/N34f45MKJFo)
 
-The development process does not end at release. It continues through use, feedback, and revision.
+### Project showcase
+
+Tequila has also been shared on Xiaohongshu as part of its public presentation and feedback process.
+
+[View the Tequila showcase on Xiaohongshu](https://www.xiaohongshu.com/discovery/item/6aba2e980000000002013350?source=webshare&xhsshare=pc_web&xsec_token=AB1ofPMD2UY6B3QkhKaT0Fb_gjfxCuPxq-BM8BlBuhLOw=&xsec_source=pc_share)
+
+Previously recorded post engagement:
+
+| Metric | Count |
+|:--|--:|
+| Likes | 60 |
+| Saves | 28 |
+| Comments | 13 |
+| Shares | 4 |
+
+These figures represent engagement with the showcase post, not verified downloads or active users.
 
 ---
 
-## 08 — Behind Tequila
+## 09 / BEHIND THE PROJECT
 
-My background spans fashion design, fashion management, and 2D/3D creative production. These fields shaped how I think about visual structure, user experience, and the relationship between form and function.
+### Design thinking meets software engineering.
 
-Learning to code gave me another way to explore those ideas. Instead of stopping at a visual concept, I could build an interactive product, test it in practice, and revise it through implementation.
+My background spans fashion design, fashion management, and 2D/3D creative production.
 
-Tequila is where these interests meet: a continuing exploration of how design and technology can shape the tools people use every day.
+These experiences shaped my attention to visual structure, composition, hierarchy, and the relationship between form and function. Learning software development gave me a way to move beyond visual concepts and turn those ideas into interactive products.
+
+Tequila brings these interests together through a practical process:
+
+- **Observe** how people interact with tools.
+- **Design** an interface around a clear purpose.
+- **Build** the experience with native technologies.
+- **Evaluate** the result through use and feedback.
+- **Refine** the product through successive releases.
+
+The project remains an ongoing exploration of how design and technology can work together to shape everyday digital experiences.
 
 ---
 
-<sub>TEQUILA / INDEPENDENTLY BUILT / OPEN SOURCE / IN CONTINUOUS DEVELOPMENT</sub>
+<div align="center">
+
+### TEQUILA
+
+**DESIGNED WITH INTENTION. BUILT TO EVOLVE.**
+
+Native macOS · Independent Project · Open Source
+
+[Download](https://github.com/caiyuyou1227-glitch/tequila/releases/latest) · [Source](https://github.com/caiyuyou1227-glitch/tequila) · [Discussions](https://github.com/caiyuyou1227-glitch/tequila/discussions)
+
+</div>
