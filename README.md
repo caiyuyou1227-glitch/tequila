@@ -90,17 +90,33 @@ Focus organizes tasks and important dates in a chronological workspace. The goal
 - Keep upcoming tasks and priorities in view.
 - Distinguish completed tasks from unfinished ones at a glance.
 - Track elapsed days and days remaining for important dates.
+- Set recurring fixed tasks for specific days of the week.
+- Remove an individual weekday from a recurring schedule or clear all its fixed-day settings.
 - Export daily task lists.
 
-**v1.4 / Task Status**
+#### v1.5 / Weekly Fixed Tasks
 
-Tasks now make completion status easier to recognize, helping users see what is finished and what still needs attention.
+**A recurring task should follow your schedule—not force you to rebuild it every week.**
+
+The Focus module now lets users choose which days of the week a task should be fixed to. This makes recurring schedules more flexible and reduces the need to configure the same task repeatedly.
+
+- **Choose weekdays:** Select the specific days of the week on which a task should be fixed.
+- **Remove one selected day:** Use the red × to remove only the selected weekday.
+- **Clear all fixed days:** Use the trash button to remove all fixed-day settings for that task.
+
+The two deletion controls serve different purposes: the red × removes one selected weekday, while the trash button clears the task's entire fixed-day configuration.
+
+Less repetitive setup. More control over your weekly routine.
+
+![Focus Interface](screenshots/focus.png)
+
+#### v1.4 / Task Status
+
+Tasks make completion status easier to recognize, helping users see what is finished and what still needs attention.
 
 Because an unchecked task is not a completed task. It is just an optimistic little square.
 
 **INTERFACE DETAIL / Clear status. Clearer decisions.**
-
-![Focus Interface](screenshots/focus.png)
 
 ---
 
@@ -192,7 +208,7 @@ Tequila treats visual design as part of product functionality.
 
 An interface does more than display information. It determines what attracts attention, how information is organized, and how comfortably people interact with a tool over time.
 
-Three principles guide the project:
+Four principles guide the project:
 
 #### 01 — Visual hierarchy
 
@@ -290,17 +306,21 @@ flowchart LR
 | **v1.2** | Focus updates | Added count-up and countdown day counters; corrected wording inconsistencies |
 | **v1.3** | Task timing | Refined count-up and countdown functionality in Tasks |
 | **v1.4** | Task clarity | Added clearer completed and incomplete task indicators; made the delete button red for better visibility |
+| **v1.5** | Weekly planning | Added weekday selection for fixed tasks, with separate controls for removing one selected day and clearing all fixed-day settings |
 
-### v1.4 / Small changes. Less second-guessing.
+### v1.5 / A better fit for your week.
 
-This update focuses on a practical problem I encountered while using Tequila myself: I wanted to understand the state of my tasks more quickly, without having to inspect each one individually.
+This update focuses on recurring task planning. Instead of treating every week as a blank slate, users can choose the weekdays on which a task should be fixed.
 
-- **Task Status:** Completed and unfinished tasks are easier to distinguish at a glance.
-- **Delete Button:** The delete control is now red, making its purpose more visually apparent.
+- **Weekly Scheduling:** Select the specific weekdays for a fixed task.
+- **Precise Removal:** The red × removes only the selected weekday.
+- **Complete Reset:** The trash button removes all fixed-day settings for that task.
 
-These changes are intentionally simple. The goal is to reduce ambiguity in everyday use, not to make the interface more complicated.
+Separating these actions makes schedule management more predictable: removing one day does not mean clearing the entire weekly setup.
 
-Sometimes better design means adding a feature. Sometimes it means making the existing one harder to misunderstand.
+A small distinction in the interface can make a meaningful difference in how confidently people use it.
+
+**v1.5 PRINCIPLE / Recurring tasks should be easy to configure—and hard to misunderstand.**
 
 **[Explore All Releases →](https://github.com/caiyuyou1227-glitch/tequila/releases)**
 
@@ -405,7 +425,7 @@ The project remains an ongoing exploration of how design and technology can work
 
 **DESIGNED WITH INTENTION. BUILT TO EVOLVE.**
 
-Native macOS · Independent Project · Open Source
+Native macOS · Independent Project
 
 [Download](https://github.com/caiyuyou1227-glitch/tequila/releases/latest) · [Source](https://github.com/caiyuyou1227-glitch/tequila) · [Discussions](https://github.com/caiyuyou1227-glitch/tequila/discussions)
 
