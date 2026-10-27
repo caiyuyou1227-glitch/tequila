@@ -1,4 +1,5 @@
- <div align="center">
+
+<div align="center">
 
 # T E Q U I L A
 
@@ -51,13 +52,13 @@ flowchart TD
     A --> C["TIMER<br/>Time Tracking"]
     A --> D["CALENDAR<br/>Scheduling"]
     A --> E["MAIL<br/>Communication"]
-    A --> F["LOGS<br/>Knowledge"]
-    A --> G["SETTINGS<br/>Personalization"]
+    A --> F["SETTINGS<br/>Personalization"]
+    A --> G["LOGS<br/>Knowledge"]
 
     B -. "Plan" .-> C
-    C -. "Track" .-> F
+    C -. "Track" .-> G
     D -. "Schedule" .-> B
-    G -. "Customize" .-> A
+    F -. "Customize" .-> A
 
     classDef core fill:#101714,stroke:#8AFFC1,color:#8AFFC1,stroke-width:2px
     classDef module fill:#171C19,stroke:#59665F,color:#FFFFFF
@@ -73,8 +74,8 @@ Each module serves a distinct purpose while sharing the same application and vis
 | **Timer** | Count-up and countdown timing | Make time measurable |
 | **Calendar** | Schedule visualization | Make time easier to interpret |
 | **Mail** | Multi-account email | Bring communication together |
-| **Logs** | Notes and research | Give information a structure |
 | **Settings** | Interface customization | Give users control over their environment |
+| **Logs** | Notes and research | Give information a structure |
 
 ---
 
@@ -90,7 +91,7 @@ Focus organizes tasks and important dates in a chronological workspace. The goal
 - Keep upcoming tasks and priorities in view.
 - Distinguish completed tasks from unfinished ones at a glance.
 - Track elapsed days and days remaining for important dates.
-- Set recurring fixed tasks for specific days of the week.
+- Set fixed tasks for specific days of the week.
 - Remove an individual weekday from a recurring schedule or clear all its fixed-day settings.
 - Export daily task lists.
 
@@ -170,21 +171,7 @@ Supported services:
 
 ---
 
-### 05 — LOGS
-
-**Capture ideas. Organize what matters.**
-
-Logs provides a place for notes, research, and project materials.
-
-- Record ideas and working notes.
-- Organize information into folders.
-- Combine text with images and tables.
-
-![Logs Interface](screenshots/logs.png)
-
----
-
-### 06 — SETTINGS
+### 05 — SETTINGS
 
 **The interface is part of the experience.**
 
@@ -197,6 +184,20 @@ Customization is not an afterthought. It is part of how Tequila is designed to b
 Your workspace, your rules. Even the colors get a say.
 
 ![Settings Interface](screenshots/settings.png)
+
+---
+
+### 06 — LOGS
+
+**Capture ideas. Organize what matters.**
+
+Logs provides a place for notes, research, and project materials.
+
+- Record ideas and working notes.
+- Organize information into folders.
+- Combine text with images and tables.
+
+![Logs Interface](screenshots/logs.png)
 
 ---
 
@@ -257,8 +258,8 @@ TEQUILA
 │   ├── Timer
 │   ├── Calendar
 │   ├── Mail
-│   ├── Logs
-│   └── Settings
+│   ├── Settings
+│   └── Logs
 │
 └── Distribution
     └── GitHub Releases
