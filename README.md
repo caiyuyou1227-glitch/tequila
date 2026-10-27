@@ -1,4 +1,4 @@
-<div align="center">
+ <div align="center">
 
 # T E Q U I L A
 
@@ -29,7 +29,7 @@ A native macOS productivity workspace built with Swift, SwiftUI, and AppKit.
 
 Tequila began with a question: why should people adapt their working habits to the limitations of their software?
 
-Many productivity tools prioritize functionality at the expense of visual coherence, while others offer polished interfaces without bringing everyday workflows together. I wanted to explore a different approach: a workspace where practical utility, visual design, and personalization are considered as parts of the same system.
+Many productivity tools prioritize functionality at the expense of visual coherence, while others offer polished interfaces without bringing everyday workflows together. I wanted to explore a different approach: a workspace where practical utility, visual design, and personalization are treated as parts of the same system.
 
 Built as an independent project, Tequila brings six everyday workflows into one native macOS application.
 
@@ -69,7 +69,7 @@ Each module serves a distinct purpose while sharing the same application and vis
 
 | Module | Core Function | Design Intent |
 |:--|:--|:--|
-| **Focus** | Task and date planning | Make priorities and important dates visible |
+| **Focus** | Task and date planning | Make priorities and progress visible |
 | **Timer** | Count-up and countdown timing | Make time measurable |
 | **Calendar** | Schedule visualization | Make time easier to interpret |
 | **Mail** | Multi-account email | Bring communication together |
@@ -81,20 +81,31 @@ Each module serves a distinct purpose while sharing the same application and vis
 ## 02 / THE MODULES
 
 ### 01 — FOCUS
-**Structure the day. See time differently.**
 
-Focus helps organize tasks and important dates in a chronological workspace.
+**Know what needs doing. Know what is already done.**
+
+Focus organizes tasks and important dates in a chronological workspace. The goal is to make progress visible without turning task management into another task.
 
 - Create and organize daily schedules.
 - Keep upcoming tasks and priorities in view.
+- Distinguish completed tasks from unfinished ones at a glance.
 - Track elapsed days and days remaining for important dates.
 - Export daily task lists.
+
+**v1.4 / Task Status**
+
+Tasks now make completion status easier to recognize, helping users see what is finished and what still needs attention.
+
+Because an unchecked task is not a completed task. It is just an optimistic little square.
+
+**INTERFACE DETAIL / Clear status. Clearer decisions.**
 
 ![Focus Interface](screenshots/focus.png)
 
 ---
 
 ### 02 — TIMER
+
 **Turn time into something you can understand.**
 
 A workspace for tracking sessions and organizing time across projects.
@@ -103,11 +114,14 @@ A workspace for tracking sessions and organizing time across projects.
 - Organize projects with custom folders.
 - Track time spent on different activities.
 
+Time is limited. At least now you can see where it went.
+
 ![Timer Interface](screenshots/timer.png)
 
 ---
 
 ### 03 — CALENDAR
+
 **Make schedules visual, not just informational.**
 
 A customizable calendar designed around visual hierarchy and personal preference.
@@ -121,6 +135,7 @@ A customizable calendar designed around visual hierarchy and personal preference
 ---
 
 ### 04 — MAIL
+
 **Multiple inboxes. One place to work.**
 
 Bring supported email accounts into a unified workspace.
@@ -140,6 +155,7 @@ Supported services:
 ---
 
 ### 05 — LOGS
+
 **Capture ideas. Organize what matters.**
 
 Logs provides a place for notes, research, and project materials.
@@ -153,6 +169,7 @@ Logs provides a place for notes, research, and project materials.
 ---
 
 ### 06 — SETTINGS
+
 **The interface is part of the experience.**
 
 Customization is not an afterthought. It is part of how Tequila is designed to be used.
@@ -160,6 +177,8 @@ Customization is not an afterthought. It is part of how Tequila is designed to b
 - Customize backgrounds and colors.
 - Adjust typography and interface preferences.
 - Shape the visual environment around individual working habits.
+
+Your workspace, your rules. Even the colors get a say.
 
 ![Settings Interface](screenshots/settings.png)
 
@@ -177,17 +196,27 @@ Three principles guide the project:
 
 #### 01 — Visual hierarchy
 
-Information should be organized so that users can distinguish priorities, navigate functions, and understand the interface without unnecessary visual noise.
+Information should be organized so users can distinguish priorities, navigate functions, and understand the interface without unnecessary visual noise.
+
+The important things should stand out. Everything else should know its place.
 
 #### 02 — Customization
 
 People have different working habits and visual preferences. Adjustable colors, backgrounds, and typography give users greater control over their workspace.
+
+A useful interface should accommodate different preferences rather than assume everyone sees the world in the same palette.
 
 #### 03 — Functional coherence
 
 The six modules should feel like parts of one product, rather than unrelated utilities placed inside the same window.
 
 The challenge is to balance individual functionality with a consistent overall experience.
+
+#### 04 — Feedback-driven refinement
+
+A design decision is a hypothesis, not a permanent law.
+
+Tequila evolves through use, feedback, and targeted revisions. The aim is to make the interface clearer and the product more useful—not to add features simply to make a release number go up.
 
 ---
 
@@ -229,6 +258,8 @@ TEQUILA
 
 The project brings interface decisions and implementation into the same development process. Design choices must work not only as visual concepts, but also as parts of a functioning application.
 
+**BUILD PRINCIPLE / A good interface must work, not just look like it does.**
+
 ---
 
 ## 05 / ITERATION
@@ -258,10 +289,18 @@ flowchart LR
 | **v1.1** | Interface refinement | Simplified the interface and removed unnecessary text |
 | **v1.2** | Focus updates | Added count-up and countdown day counters; corrected wording inconsistencies |
 | **v1.3** | Task timing | Refined count-up and countdown functionality in Tasks |
+| **v1.4** | Task clarity | Added clearer completed and incomplete task indicators; made the delete button red for better visibility |
 
-Each iteration provides an opportunity to revisit the product, reconsider earlier decisions, and make targeted improvements.
+### v1.4 / Small changes. Less second-guessing.
 
-The objective is not simply to add features with every release. It is to make the existing experience more considered and useful.
+This update focuses on a practical problem I encountered while using Tequila myself: I wanted to understand the state of my tasks more quickly, without having to inspect each one individually.
+
+- **Task Status:** Completed and unfinished tasks are easier to distinguish at a glance.
+- **Delete Button:** The delete control is now red, making its purpose more visually apparent.
+
+These changes are intentionally simple. The goal is to reduce ambiguity in everyday use, not to make the interface more complicated.
+
+Sometimes better design means adding a feature. Sometimes it means making the existing one harder to misunderstand.
 
 **[Explore All Releases →](https://github.com/caiyuyou1227-glitch/tequila/releases)**
 
@@ -312,7 +351,7 @@ Open the Xcode project in a compatible macOS development environment and build t
 
 Tequila is publicly available for people to explore, test, and discuss.
 
-Feedback is an important part of product development: a suggestion can reveal an unclear interaction, a usability issue, or an assumption worth reconsidering.
+Feedback is an important part of product development. A suggestion can reveal an unclear interaction, a usability issue, or an assumption worth reconsidering.
 
 - **Feature requests:** [GitHub Discussions](https://github.com/caiyuyou1227-glitch/tequila/discussions)
 - **Bug reports:** [GitHub Issues](https://github.com/caiyuyou1227-glitch/tequila/issues)
@@ -353,6 +392,8 @@ Tequila brings these interests together through a practical process:
 - **Build** the experience with native technologies.
 - **Evaluate** the result through use and feedback.
 - **Refine** the product through successive releases.
+
+Developing Tequila has also changed how I think about design. A choice that looks right to its creator may not be the clearest choice for someone else. A feature that seems obvious during development may need a more visible signal in practice.
 
 The project remains an ongoing exploration of how design and technology can work together to shape everyday digital experiences.
 
