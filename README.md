@@ -180,8 +180,11 @@ Customization is not an afterthought. It is part of how Tequila is designed to b
 - Customize backgrounds and colors.
 - Adjust typography and interface preferences.
 - Shape the visual environment around individual working habits.
+- Configure the region displayed in the upper-right corner of the workspace; the display updates to reflect the selected setting.
 
-Your workspace, your rules. Even the colors get a say.
+The upper-right region is more than a label: it responds to your settings and can be repositioned with the mouse.
+
+Your workspace, your rules. Even the corner gets a little flexibility.
 
 ![Settings Interface](screenshots/settings.png)
 
