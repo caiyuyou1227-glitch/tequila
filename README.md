@@ -47,7 +47,7 @@ The goal is not to build the application with the most features. It is to build 
 flowchart TD
     A["TEQUILA<br/>Personal Workspace"]
 
-    A --> B["FOCUS<br/>Task Management"]
+    A --> B["FOCUS<br/>Planning"]
     A --> C["TIMER<br/>Time Tracking"]
     A --> D["CALENDAR<br/>Scheduling"]
     A --> E["MAIL<br/>Communication"]
