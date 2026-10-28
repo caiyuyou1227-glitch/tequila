@@ -1,5 +1,4 @@
-
-<div align="center">
+ <div align="center">
 
 # T E Q U I L A
 
@@ -92,14 +91,30 @@ Focus organizes tasks and important dates in a chronological workspace. The goal
 - Distinguish completed tasks from unfinished ones at a glance.
 - Track elapsed days and days remaining for important dates.
 - Set fixed tasks for specific days of the week.
-- Remove an individual weekday from a recurring schedule or clear all its fixed-day settings.
+- Fix tasks for an entire day with the new **All Day** option.
+- Highlight Fix and Pin markers with a fluorescent yellow highlighter effect.
+- Hide selected tasks to reduce visual clutter without deleting them.
 - Export daily task lists.
+
+#### v1.6 / More Control, Less Clutter
+
+**Your task list should work for you—not audition for the role of your entire screen.**
+
+Tequila v1.6 makes task organization more flexible with three updates.
+
+- **All-Day Fix:** Added an All Day option to Fix, making it easier to designate tasks as fixed for the entire day.
+- **Highlighted Fix & Pin:** Updated Fix and Pin with a fluorescent yellow highlighter effect, making important markers easier to notice.
+- **Hide Tasks:** Added the ability to hide selected tasks after creating them, helping users keep their workspace focused on what matters now.
+
+The goal is simple: make important tasks easier to identify while giving users more control over what they see.
+
+![Focus Interface](screenshots/focus.png)
 
 #### v1.5 / Weekly Fixed Tasks
 
 **A recurring task should follow your schedule—not force you to rebuild it every week.**
 
-The Focus module now lets users choose which days of the week a task should be fixed to. This makes recurring schedules more flexible and reduces the need to configure the same task repeatedly.
+The Focus module lets users choose which days of the week a task should be fixed to.
 
 - **Choose weekdays:** Select the specific days of the week on which a task should be fixed.
 - **Remove one selected day:** Use the red × to remove only the selected weekday.
@@ -108,8 +123,6 @@ The Focus module now lets users choose which days of the week a task should be f
 The two deletion controls serve different purposes: the red × removes one selected weekday, while the trash button clears the task's entire fixed-day configuration.
 
 Less repetitive setup. More control over your weekly routine.
-
-![Focus Interface](screenshots/focus.png)
 
 #### v1.4 / Task Status
 
@@ -179,12 +192,13 @@ Customization is not an afterthought. It is part of how Tequila is designed to b
 
 - Customize backgrounds and colors.
 - Adjust typography and interface preferences.
-- Shape the visual environment around individual working habits.
-- Configure the region displayed in the upper-right corner of the workspace; the display updates to reflect the selected setting.
+- Personalize the workspace around individual working habits.
+- Adjust the top-right display through Settings.
+- Reposition the relevant display area using the mouse.
 
-The upper-right region is more than a label: it responds to your settings and can be repositioned with the mouse.
+The interface should adapt to the way you work, rather than making you adapt to it.
 
-Your workspace, your rules. Even the corner gets a little flexibility.
+Your workspace, your rules. Even the colors get a say.
 
 ![Settings Interface](screenshots/settings.png)
 
@@ -212,9 +226,9 @@ Tequila treats visual design as part of product functionality.
 
 An interface does more than display information. It determines what attracts attention, how information is organized, and how comfortably people interact with a tool over time.
 
-Four principles guide the project:
+Four principles guide the project.
 
-#### 01 — Visual hierarchy
+#### 01 — Visual Hierarchy
 
 Information should be organized so users can distinguish priorities, navigate functions, and understand the interface without unnecessary visual noise.
 
@@ -226,13 +240,13 @@ People have different working habits and visual preferences. Adjustable colors, 
 
 A useful interface should accommodate different preferences rather than assume everyone sees the world in the same palette.
 
-#### 03 — Functional coherence
+#### 03 — Functional Coherence
 
 The six modules should feel like parts of one product, rather than unrelated utilities placed inside the same window.
 
 The challenge is to balance individual functionality with a consistent overall experience.
 
-#### 04 — Feedback-driven refinement
+#### 04 — Feedback-Driven Refinement
 
 A design decision is a hypothesis, not a permanent law.
 
@@ -301,7 +315,7 @@ flowchart LR
     class A,B,C,D,E,F stage
 ```
 
-### Release history
+### Release History
 
 | Version | Focus | Changes |
 |:--|:--|:--|
@@ -309,22 +323,21 @@ flowchart LR
 | **v1.1** | Interface refinement | Simplified the interface and removed unnecessary text |
 | **v1.2** | Focus updates | Added count-up and countdown day counters; corrected wording inconsistencies |
 | **v1.3** | Task timing | Refined count-up and countdown functionality in Tasks |
-| **v1.4** | Task clarity | Added clearer completed and incomplete task indicators; made the delete button red for better visibility |
+| **v1.4** | Task clarity | Improved completed and incomplete task indicators; made the delete button red for better visibility |
 | **v1.5** | Weekly planning | Added weekday selection for fixed tasks, with separate controls for removing one selected day and clearing all fixed-day settings |
+| **v1.6** | Flexible task organization | Added All Day to Fix, fluorescent yellow highlighting for Fix and Pin, and the ability to hide selected tasks |
 
-### v1.5 / A better fit for your week.
+### v1.6 / A More Focused Workspace
 
-This update focuses on recurring task planning. Instead of treating every week as a blank slate, users can choose the weekdays on which a task should be fixed.
+This release improves the way tasks are scheduled, highlighted, and displayed.
 
-- **Weekly Scheduling:** Select the specific weekdays for a fixed task.
-- **Precise Removal:** The red × removes only the selected weekday.
-- **Complete Reset:** The trash button removes all fixed-day settings for that task.
+- **All-Day Fix:** Users can designate a task as fixed for the entire day.
+- **Visual Markers:** Fix and Pin now use a fluorescent yellow highlighter effect to improve visibility.
+- **Task Visibility:** Users can hide selected tasks after creating them, reducing clutter without treating hiding as deletion.
 
-Separating these actions makes schedule management more predictable: removing one day does not mean clearing the entire weekly setup.
+These updates focus on everyday usability rather than adding complexity for its own sake.
 
-A small distinction in the interface can make a meaningful difference in how confidently people use it.
-
-**v1.5 PRINCIPLE / Recurring tasks should be easy to configure—and hard to misunderstand.**
+**v1.6 PRINCIPLE / Better visibility. More flexibility. Fewer distractions.**
 
 **[Explore All Releases →](https://github.com/caiyuyou1227-glitch/tequila/releases)**
 
@@ -357,7 +370,7 @@ Explore the interface, core modules, and product experience in the walkthrough b
 
 If macOS displays a security warning, verify the source and understand the implications before proceeding. Do not bypass security protections unless you trust the application.
 
-### Build from source
+### Build from Source
 
 Clone the public repository:
 
@@ -382,7 +395,7 @@ Feedback is an important part of product development. A suggestion can reveal an
 - **Source code:** [Browse the repository](https://github.com/caiyuyou1227-glitch/tequila)
 - **Product demonstration:** [YouTube](https://youtu.be/N34f45MKJFo)
 
-### Project showcase
+### Project Showcase
 
 Tequila has also been shared on Xiaohongshu as part of its public presentation and feedback process.
 
