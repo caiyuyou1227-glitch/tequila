@@ -52,7 +52,7 @@ flowchart TD
     A --> D["CALENDAR<br/>Scheduling"]
     A --> E["MAIL<br/>Communication"]
     A --> F["SETTINGS<br/>Personalization"]
-    A --> G["LOGS<br/>Notes and Research"]
+    A --> G["LOGS<br/>Knowledge"]
 
     B -. "Plan" .-> C
     C -. "Track" .-> G
