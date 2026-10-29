@@ -272,7 +272,7 @@ See Tequila in action.
 
 <div align="center">
 
-[![Tequila Product Demo](https://img.youtube.com/vi/N34f45MKJFo/maxresdefault.jpg)](https://youtu.be/N34f45MKJFo)
+[![Tequila Product Demo](https://img.youtube.com/vi/Plah28XUPFI/maxresdefault.jpg)](https://www.youtube.com/watch?v=Plah28XUPFI)
 
 **[Watch the product demonstration on YouTube →](https://www.youtube.com/watch?v=Plah28XUPFI)**
 
