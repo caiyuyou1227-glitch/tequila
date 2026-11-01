@@ -341,18 +341,20 @@ flowchart TD
 
 ## 05 / ITERATION
 
-### A release is not the end of the process.
+### Built through iteration. Refined through use.
 
-Tequila is developed through an ongoing cycle of observation, implementation, release, feedback, and revision.
+A product is never finished at its first release.
+
+Tequila evolves through a continuous process of observing real usage, identifying friction points, refining interactions, and turning feedback into meaningful improvements. Each release is an opportunity to make the experience more intuitive, consistent, and adaptable to everyday workflows.
 
 ```mermaid
 flowchart LR
-    A["01<br/>Observe"] --> B["02<br/>Design"]
-    B --> C["03<br/>Build"]
-    C --> D["04<br/>Release"]
-    D --> E["05<br/>Gather Feedback"]
-    E --> F["06<br/>Refine"]
-    F --> B
+    A["01 · Observe"] --> B["02 · Identify"]
+    B --> C["03 · Design"]
+    C --> D["04 · Implement"]
+    D --> E["05 · Release"]
+    E --> F["06 · Gather Feedback"]
+    F --> A
 
     classDef stage fill:#111713,stroke:#8AFFC1,color:#FFFFFF
     class A,B,C,D,E,F stage
@@ -360,33 +362,55 @@ flowchart LR
 
 ### Release history
 
-| Version | Focus | Changes |
+| Version | Focus | Key Improvements |
 |:--|:--|:--|
-| **v1.0** | Initial release | Introduced the core workspace and six modules |
-| **v1.1** | Interface refinement | Simplified the interface and removed unnecessary text |
-| **v1.2** | Focus updates | Added count-up and countdown day counters; corrected wording inconsistencies |
-| **v1.3** | Task timing | Refined count-up and countdown functionality in Tasks |
-| **v1.4** | Task clarity | Added clearer completed and incomplete task indicators; made the delete button red for better visibility |
-| **v1.5** | Weekly planning | Added weekday selection for fixed tasks, with separate controls for removing one selected day and clearing all fixed-day settings |
-
-### v1.5 / A better fit for your week.
-
-This update focuses on recurring task planning. Instead of treating every week as a blank slate, users can choose the weekdays on which a task should be fixed.
-
-- **Weekly Scheduling:** Select the specific weekdays for a fixed task.
-- **Precise Removal:** The red × removes only the selected weekday.
-- **Complete Reset:** The trash button removes all fixed-day settings for that task.
-
-Separating these actions makes schedule management more predictable: removing one day does not mean clearing the entire weekly setup.
-
-A small distinction in the interface can make a meaningful difference in how confidently people use it.
-
-**v1.5 PRINCIPLE / Recurring tasks should be easy to configure—and hard to misunderstand.**
-
-**[Explore All Releases →](https://github.com/caiyuyou1227-glitch/tequila/releases)**
+| **v1.0** | Initial Release | Introduced the core workspace and six integrated modules |
+| **v1.1** | Interface Refinement | Simplified the interface and removed unnecessary visual elements |
+| **v1.2** | Date Tracking | Introduced count-up and countdown counters; refined terminology |
+| **v1.3** | Task Timing | Further refined elapsed-day and remaining-day tracking |
+| **v1.4** | Task Clarity | Improved completed and incomplete task indicators; enhanced delete-button visibility |
+| **v1.5** | Weekly Planning | Introduced weekday-based fixed tasks and more precise schedule controls |
+| **v1.6** | Scheduling & Task Independence | Added all-day scheduling, date-specific task states, independent Fix settings, and task visibility controls |
 
 ---
 
+### v1.6 / More control. Less interference.
+
+**Making every date work on its own.**
+
+As task scheduling became more flexible, another design challenge emerged: actions on one date should not unintentionally affect another. Version 1.6 addresses this by giving each selected date greater independence across scheduling and task management.
+
+#### 01 — All-Day Scheduling
+
+Tasks can now be fixed for an entire day through the new **All Day** option. This extends scheduling beyond specific time slots, accommodating tasks that span a full day or do not require a defined time.
+
+#### 02 — Date-Specific Progress
+
+Task completion is now tracked independently for each selected date. Completing a recurring task today will not automatically mark it as completed on other dates.
+
+Each date maintains its own progress, making daily records more accurate and predictable.
+
+#### 03 — Independent Fix Settings
+
+Fix settings are managed separately within each selected date. Changing a task's Fix status on one date no longer automatically changes its status on other dates.
+
+This gives users more precise control over recurring schedules without unintended changes across the calendar.
+
+#### 04 — Flexible Task Visibility
+
+Tasks can now be hidden after creation without being permanently deleted. Users can keep their workspace focused while retaining tasks that may become relevant later.
+
+---
+
+### Design Philosophy / Independence by Design
+
+Version 1.6 introduces a clearer principle to task management: **each date should preserve its own context.**
+
+Scheduling, completion, and task visibility should respond to the user's current selection rather than create unintended changes elsewhere. By separating these controls, Tequila makes daily planning more precise while keeping recurring workflows flexible.
+
+**v1.6 PRINCIPLE / A change made today should not rewrite yesterday—or decide tomorrow.**
+
+[**Explore All Releases →**](https://github.com/caiyuyou1227-glitch/tequila/releases)
 ## 06 / PRODUCT DEMONSTRATION
 
 ### See the workspace in action.
