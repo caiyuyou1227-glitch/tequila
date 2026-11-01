@@ -1,4 +1,3 @@
- 
 <div align="center">
 
 # T E Q U I L A
@@ -13,12 +12,12 @@ A native macOS productivity workspace built with Swift, SwiftUI, and AppKit.
 
 <br/>
 
-![Release](https://img.shields.io/github/v/release/caiyuyou1227-glitch/tequila?style=flat-square&color=8AFFC1&label=LATEST%20RELEASE)
-![Stars](https://img.shields.io/github/stars/caiyuyou1227-glitch/tequila?style=flat-square&color=8AFFC1&label=STARS)
-![Forks](https://img.shields.io/github/forks/caiyuyou1227-glitch/tequila?style=flat-square&color=8AFFC1&label=FORKS)
-![Issues](https://img.shields.io/github/issues/caiyuyou1227-glitch/tequila?style=flat-square&color=8AFFC1&label=ISSUES)
-![Platform](https://img.shields.io/badge/PLATFORM-macOS-8AFFC1?style=flat-square)
-![Language](https://img.shields.io/badge/LANGUAGE-Swift-8AFFC1?style=flat-square)
+![Release](https://img.shields.io/github/v/release/caiyuyou1227-glitch/tequila?style=flat-square&label=RELEASE&labelColor=202421&color=A8B19A)
+![Stars](https://img.shields.io/github/stars/caiyuyou1227-glitch/tequila?style=flat-square&label=STARS&labelColor=202421&color=E9E7E0)
+![Forks](https://img.shields.io/github/forks/caiyuyou1227-glitch/tequila?style=flat-square&label=FORKS&labelColor=202421&color=E9E7E0)
+![Issues](https://img.shields.io/github/issues/caiyuyou1227-glitch/tequila?style=flat-square&label=ISSUES&labelColor=202421&color=E9E7E0)
+![Platform](https://img.shields.io/badge/PLATFORM-macOS-E9E7E0?style=flat-square&labelColor=202421)
+![Language](https://img.shields.io/badge/LANGUAGE-Swift-E9E7E0?style=flat-square&labelColor=202421)
 
 </div>
 
