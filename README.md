@@ -1,4 +1,4 @@
-<div align="center">
+ <div align="center">
 
 # T E Q U I L A
 
@@ -73,7 +73,8 @@ A task management space built around visibility, scheduling, and flexible organi
 
 **Task Management**
 - Create and organize tasks.
-- Track task completion status.
+- Track completion status independently for each date.
+- Completing a task on one date does not affect its status on other dates.
 - Hide selected tasks after creating them without deleting them.
 
 **Date Tracking**
@@ -82,17 +83,16 @@ A task management space built around visibility, scheduling, and flexible organi
 
 **Weekly Scheduling**
 - Assign fixed tasks to selected weekdays.
+- Manage Fix settings independently for each date.
+- Enabling Fix on one date does not automatically enable it on other dates.
 - Remove an individual weekday without clearing the task's other scheduled days.
 - Clear all fixed-day settings for a task when needed.
 
 **All-Day Scheduling**
 - Use the `All Day` option when a task should be scheduled for the entire day.
 
-**Visual Markers**
-- Highlight `Fix` and `Pin` with fluorescent highlighter yellow to make important tasks easier to identify.
-
 **Daily Workflow**
-- Keep task status and scheduling information visible.
+- Apply task status and scheduling changes only to the currently selected date.
 - Export daily task information for reference.
 
 ![Focus Module](screenshots/focus.png)
@@ -250,17 +250,17 @@ flowchart LR
 | **v1.3** | Task timing | Expanded count-up and countdown functionality within Tasks |
 | **v1.4** | Task clarity | Improved completed and incomplete task visibility; made the delete control red |
 | **v1.5** | Weekly planning | Added weekday selection for fixed tasks, with separate controls for removing one weekday or clearing all fixed-day settings |
-| **v1.6** | Task organization | Added `All Day` scheduling, fluorescent yellow highlights for `Fix` and `Pin`, and the ability to hide selected tasks without deleting them |
+| **v1.6** | Date-specific task management | Made task completion status and Fix settings independent for each date |
 
 ### v1.6 — Latest Development Focus
 
-The v1.6 update focuses on making task organization more flexible and visually clear.
+The v1.6 update introduces date-specific task management.
 
-- **All Day:** Adds an all-day option to `Fix`.
-- **Visual Markers:** Uses fluorescent highlighter yellow for `Fix` and `Pin`.
-- **Task Visibility:** Allows selected tasks to be hidden after creation without deleting them.
+- **Independent Completion Status:** Completing a task on one date does not change its status on other dates.
+- **Independent Fix Settings:** Enabling Fix on one date does not automatically enable it on other dates.
+- **Date-Specific Operations:** All task status and Fix changes apply only to the currently selected date.
 
-These changes build on earlier updates to weekly scheduling and task management, making the system more adaptable to different planning habits.
+Each date maintains its own task status and scheduling settings.
 
 [View all releases →](https://github.com/caiyuyou1227-glitch/tequila/releases)
 
