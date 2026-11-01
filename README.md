@@ -86,43 +86,21 @@ Each module serves a distinct purpose while sharing the same application and vis
 
 ### 01 — FOCUS
 
-**Know what needs doing. Know what is already done.**
+**Your day, structured around what matters.**
 
-Focus organizes tasks and important dates in a chronological workspace. The goal is to make progress visible without turning task management into another task.
+More than a to-do list, Focus is a flexible planning space that brings tasks, priorities, and time-based goals into one clear view. Organize each day, build recurring routines, and stay in control of your progress without losing sight of the bigger picture.
 
-- Create and organize daily schedules.
-- Keep upcoming tasks and priorities in view.
-- Distinguish completed tasks from unfinished ones at a glance.
-- Track elapsed days and days remaining for important dates.
-- Set fixed tasks for specific days of the week.
-- Remove an individual weekday from a recurring schedule or clear all its fixed-day settings.
-- Export daily task lists.
+- **Intuitive Task Management** — Create, organize, and prioritize tasks in a streamlined daily workspace.
+- **Independent Daily Progress** — Mark tasks as complete or incomplete for each selected date, keeping progress accurate and separate across days.
+- **Smart Date Tracking** — Track days elapsed and days remaining for important deadlines, milestones, and personal goals.
+- **Flexible Weekly Planning** — Assign fixed tasks to selected weekdays, with precise controls to manage recurring schedules.
+- **Precise Schedule Control** — Modify individual weekdays or clear an entire fixed-day schedule without affecting other dates.
+- **Flexible Task Visibility** — Hide tasks when they are not immediately relevant, without permanently deleting them.
+- **Daily Task Export** — Export task lists for convenient reference and a clearer record of your plans.
 
-#### v1.5 / Weekly Fixed Tasks
-
-**A recurring task should follow your schedule—not force you to rebuild it every week.**
-
-The Focus module now lets users choose which days of the week a task should be fixed to. This makes recurring schedules more flexible and reduces the need to configure the same task repeatedly.
-
-- **Choose weekdays:** Select the specific days of the week on which a task should be fixed.
-- **Remove one selected day:** Use the red × to remove only the selected weekday.
-- **Clear all fixed days:** Use the trash button to remove all fixed-day settings for that task.
-
-The two deletion controls serve different purposes: the red × removes one selected weekday, while the trash button clears the task's entire fixed-day configuration.
-
-Less repetitive setup. More control over your weekly routine.
+**Plan with purpose. Track your progress. Make every day count.**
 
 ![Focus Interface](screenshots/focus.png)
-
-#### v1.4 / Task Status
-
-Tasks make completion status easier to recognize, helping users see what is finished and what still needs attention.
-
-Because an unchecked task is not a completed task. It is just an optimistic little square.
-
-**INTERFACE DETAIL / Clear status. Clearer decisions.**
-
----
 
 ### 02 — TIMER
 
