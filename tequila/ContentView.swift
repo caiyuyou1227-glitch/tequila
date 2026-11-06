@@ -2164,6 +2164,20 @@ struct CalendarEvent: Identifiable, Codable {
     }
 }
 
+func deduplicatedCalendarEvents(_ events: [CalendarEvent]) -> [CalendarEvent] {
+    var seenIDs = Set<UUID>()
+    return events.filter { seenIDs.insert($0.id).inserted }
+}
+
+func reminderDisplay(from events: [CalendarEvent], maxVisible: Int) -> (visible: [CalendarEvent], overflow: Int) {
+    let distinctEvents = deduplicatedCalendarEvents(events)
+    let visibleCount = max(0, maxVisible)
+    return (
+        visible: Array(distinctEvents.prefix(visibleCount)),
+        overflow: max(0, distinctEvents.count - visibleCount)
+    )
+}
+
 // ⭐ 星星标记的状态枚举
 enum CustomStarState: String, Codable, CaseIterable {
     case none = "none"
@@ -2792,13 +2806,10 @@ struct IndependentCalendarGridView: View {
         let rawReminders = calendarEvents.filter {
             $0.isReminder && Calendar.current.isDate($0.date, inSameDayAs: targetDate)
         }
-        let mergedReminders = sutureCalendarEvents(rawReminders)
-        
         let visibleRemindersCount = max(0, maxVisibleSlotsPerCell - 1)
-        let visibleReminders = Array(mergedReminders.prefix(visibleRemindersCount))
-        if mergedReminders.count > visibleRemindersCount {
-            overflowCount += (mergedReminders.count - visibleRemindersCount)
-        }
+        let reminderResult = reminderDisplay(from: rawReminders, maxVisible: visibleRemindersCount)
+        let visibleReminders = reminderResult.visible
+        overflowCount += reminderResult.overflow
         
         return (visibleReminders, overflowCount)
     }
@@ -3207,30 +3218,6 @@ struct IndependentCalendarGridView: View {
             block(&calendarEvents[idx])
             saveCalendarStatesToDisk()
         }
-    }
-    
-    private func sutureCalendarEvents(_ events: [CalendarEvent]) -> [CalendarEvent] {
-        var merged: [CalendarEvent] = []
-        for ev in events {
-            let isDuplicate = merged.contains(where: {
-                $0.title.trimmingCharacters(in: .whitespacesAndNewlines) == ev.title.trimmingCharacters(in: .whitespacesAndNewlines) &&
-                $0.isReminder == ev.isReminder &&
-                isColorEqual($0.color, ev.color) &&
-                Calendar.current.isDate($0.date, inSameDayAs: ev.date) &&
-                Calendar.current.isDate($0.actualEndDate, inSameDayAs: ev.actualEndDate)
-            })
-            if isDuplicate { continue } else { merged.append(ev) }
-        }
-        return merged
-    }
-    
-    private func isColorEqual(_ c1: Color, _ c2: Color) -> Bool {
-        let ns1 = NSColor(c1).usingColorSpace(.deviceRGB)
-        let ns2 = NSColor(c2).usingColorSpace(.deviceRGB)
-        guard let l = ns1, let r = ns2 else { return false }
-        return abs(l.redComponent - r.redComponent) < 0.05 &&
-               abs(l.greenComponent - r.greenComponent) < 0.05 &&
-               abs(l.blueComponent - r.blueComponent) < 0.05
     }
     
     private func getSwiftUIFont(from note: CalendarNote) -> Font {
