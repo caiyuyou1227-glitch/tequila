@@ -188,6 +188,30 @@ class ThemeManager: ObservableObject {
 // 📦 2. 任务与计时器数据模型
 // =========================================================================
 
+/// Display timed tasks by start time, then untimed tasks in their saved order.
+/// Original offsets make equal start times and untimed tasks stable; dragging
+/// therefore still controls the relative order of untimed tasks and ties.
+/// This is a display-only projection and never mutates savedTasks.
+func orderedTasksForDisplay(_ tasks: [TaskRecord]) -> [TaskRecord] {
+    tasks.enumerated()
+        .sorted { left, right in
+            switch (left.element.startTime, right.element.startTime) {
+            case let (leftTime?, rightTime?):
+                if leftTime != rightTime {
+                    return leftTime < rightTime
+                }
+            case (_?, nil):
+                return true
+            case (nil, _?):
+                return false
+            case (nil, nil):
+                break
+            }
+            return left.offset < right.offset
+        }
+        .map(\.element)
+}
+
 struct TaskRecord: Identifiable, Codable {
     var id = UUID()
     var title: String
@@ -894,8 +918,9 @@ struct ContentView: View {
     }
     
     private var selectedDayTasksFiltered: [TaskRecord] {
-        savedTasks
-            .filter { $0.isRecurring || Calendar.current.isDate($0.creationDate, inSameDayAs: selectedTaskDate) }
+        orderedTasksForDisplay(savedTasks.filter {
+            $0.isRecurring || Calendar.current.isDate($0.creationDate, inSameDayAs: selectedTaskDate)
+        })
     }
     
     var body: some View {

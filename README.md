@@ -96,6 +96,7 @@ More than a to-do list, Focus is a flexible planning space that brings tasks, pr
 - **Precise Schedule Control** — Modify individual weekdays or clear an entire fixed-day schedule without affecting other dates.
 - **Flexible Task Visibility** — Hide tasks when they are not immediately relevant, without permanently deleting them.
 - **Daily Task Export** — Export task lists for convenient reference and a clearer record of your plans.
+- **Time Slot Ordering** — Timed tasks appear by ascending start time, followed by untimed tasks; saved order breaks ties and keeps untimed tasks arranged.
 
 **Plan with purpose. Track your progress. Make every day count.**
 
