@@ -1,4 +1,4 @@
-<div align="center">
+ <div align="center">
 
 # T E Q U I L A
 
@@ -87,7 +87,7 @@ Each module serves a distinct purpose while sharing the same application and vis
 
 **Your day, structured around what matters.**
 
-More than a to-do list, Focus is a flexible planning space that brings tasks, priorities, and time-based goals into one clear view. Organize each day, build recurring routines, and stay in control of your progress without losing sight of the bigger picture.
+More than a to-do list, Focus is a flexible planning space that brings tasks, priorities, subtasks, and time-based goals into one clear view. Organize each day, break complex tasks into manageable steps, build recurring routines, and stay in control of your progress without losing sight of the bigger picture.
 
 - **Intuitive Task Management** — Create, organize, and prioritize tasks in a streamlined daily workspace.
 - **Independent Daily Progress** — Mark tasks as complete or incomplete for each selected date, keeping progress accurate and separate across days.
@@ -95,9 +95,12 @@ More than a to-do list, Focus is a flexible planning space that brings tasks, pr
 - **Flexible Weekly Planning** — Assign fixed tasks to selected weekdays, with precise controls to manage recurring schedules.
 - **Precise Schedule Control** — Modify individual weekdays or clear an entire fixed-day schedule without affecting other dates.
 - **Flexible Task Visibility** — Hide tasks when they are not immediately relevant, without permanently deleting them.
+- **Subtask Management** — Break parent tasks into smaller steps and add subtasks quickly, making complex tasks easier to organize and manage.
+- **Smart Completion Linkage** — Parent tasks automatically sync their completion status and are marked complete when all their subtasks are finished.
+- **Enhanced Fixed Scheduling** — Pin or fix subtasks according to their parent task's recurrence rule, keeping related schedules consistent.
 - **Daily Task Export** — Export task lists for convenient reference and a clearer record of your plans.
 
-**Plan with purpose. Track your progress. Make every day count.**
+**Plan with purpose. Break work into steps. Keep every part connected.**
 
 ![Focus Interface](screenshots/focus.png)
 
@@ -370,6 +373,7 @@ flowchart LR
 | **v1.4** | Task Clarity | Improved completed and incomplete task indicators; enhanced delete-button visibility |
 | **v1.5** | Weekly Planning | Introduced weekday-based fixed tasks and more precise schedule controls |
 | **v1.6** | Scheduling & Task Independence | Added all-day scheduling, date-specific task states, independent Fix settings, and task visibility controls |
+| **v1.7** | Subtasks & Recurring Sync | Added quick-add subtasks, automatic parent-task completion, and parent-governed fixed scheduling |
 
 ---
 
@@ -409,7 +413,48 @@ Scheduling, completion, and task visibility should respond to the user's current
 
 **v1.6 PRINCIPLE / A change made today should not rewrite yesterday—or decide tomorrow.**
 
+---
+
+### v1.7 / Subtasks & Recurring Sync
+
+**More granular planning. More connected progress.**
+
+As tasks become more complex, a single task entry may no longer be enough to represent all the work involved. Version 1.7 introduces a more structured way to manage individual steps while keeping them connected to their parent tasks and recurring schedules.
+
+#### 01 — Subtask Management
+
+Tasks can now be divided into smaller subtasks, with quick-add functionality for creating them directly within the task workflow.
+
+This makes complex tasks easier to break down, organize, and manage without losing the overall structure of the original task.
+
+#### 02 — Smart Completion Linkage
+
+Parent tasks now automatically synchronize their completion status with their subtasks. When all subtasks are completed, the parent task is automatically marked as complete.
+
+This keeps overall task progress consistent and removes the need to manually update the parent task after finishing each individual step.
+
+#### 03 — Enhanced Fixed Scheduling
+
+Subtasks can now be pinned or fixed, with their scheduling strictly governed by the parent task's recurrence rule.
+
+This keeps subtasks aligned with the recurring schedule of their parent task, maintaining consistency across related tasks and scheduled dates.
+
+---
+
+### Design Philosophy / Connected Progress
+
+Version 1.7 extends Tequila's approach to task management: **individual steps should remain connected to the larger goal.**
+
+Subtasks provide more detailed control over the work itself, while automatic completion linkage and parent-governed scheduling preserve the relationship between individual actions and the overall plan.
+
+The result is a more structured planning experience without making task management unnecessarily complicated.
+
+**v1.7 PRINCIPLE / Break work into steps. Keep progress connected.**
+
 [**Explore All Releases →**](https://github.com/caiyuyou1227-glitch/tequila/releases)
+
+---
+
 ## 06 / PRODUCT DEMONSTRATION
 
 ### See the workspace in action.
